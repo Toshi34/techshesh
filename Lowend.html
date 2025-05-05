@@ -25,82 +25,89 @@
         a {
             text-decoration: none;
             color: inherit;
-           
         }
 
+       header {
+      background-color: black;
+      color: white;
+      padding: 12px 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      transition: padding 0.3s ease, background-color 0.3s ease;
+    }
 
-        header {
-            background-color: #000;
-            color: white;
-            padding: 20px 0;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-          .navbar {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 30px;
-            background-color: #000;
-            margin-top: -50px;
-            margin-left: 1100px;
+    .navbar-custom {
+      display: flex;
+      justify-content: center; 
+      align-items: center;
+      width: 100%;
+      max-width: 1700px;
+      margin: auto;
+      padding: 0 20px;
+      font-size: 30px;
+    }
 
-        }
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+    }
 
-        .nav-item {
-            position: relative;
-        }
+    .nav-item {
+      position: relative;
+    }
 
-        .nav-item a,
-        .dropbtn {
-            color: white;
-            font-size: 1.1em;
-            padding: 10px 15px;
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-family: inherit;
-        }
+    .nav-item a,
+    .dropbtn {
+      color: white;
+      font-size: 1.1em;
+      padding: 10px 15px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+    }
 
-        .nav-item a:hover,
-        .dropbtn:hover {
-            color: #2980b9;
-        }
+    .nav-item a:hover,
+    .dropbtn:hover {
+      color: #2980b9;
+    }
 
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: #111;
-            min-width: 180px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            z-index: 1000;
-            border-radius: 5px;
-        }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #111;
+      min-width: 180px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+      border-radius: 5px;
+    }
 
-        .dropdown-content a {
-            display: block;
-            color: white;
-            padding: 10px 15px;
-            text-align: left;
-        }
+    .dropdown-content a {
+      display: block;
+      color: white;
+      padding: 10px 15px;
+      text-align: left;
+    }
 
-        .dropdown-content a:hover {
-            background-color: #222;
-            color: #2980b9;
-        }
+    .dropdown-content a:hover {
+      background-color: #222;
+      color: #2980b9;
+    }
 
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
 
 
         .header-container {
-              max-width: 1700px;
+            max-width: 1700px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
@@ -108,7 +115,7 @@
             padding: 0 20px;
             font-size: 30px;
             font-family: sans-serif;
-            font-weight:    700;
+            font-weight: 700;
         }
 
         .header-container h1 {
@@ -123,7 +130,6 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-           
         }
 
         .hero h2 {
@@ -140,8 +146,6 @@
             background-color: #fff;
             color: #333;
             text-align: center;
-
-          
         }
 
         .about h2 {
@@ -238,16 +242,80 @@
             font-size: 1em;
             margin-top: 10px;
         }
+
+        
+        @media (max-width: 768px) {
+           header {
+        padding: 10px 0;
+      }
+
+      .navbar-custom {
+        padding: 10px 20px;
+        font-size: 24px;
+      }
+
+      .nav-links {
+        gap: 15px;
+      }
+
+      .nav-item a,
+      .dropbtn {
+        font-size: 1em;
+        padding: 8px 12px;
+      }
+
+            .header-container h1 {
+                font-size: 1.5em;
+            }
+
+            .hero h2 {
+                font-size: 3em;
+            }
+
+            .pc-builds h2 {
+                font-size: 50px;
+            }
+
+            .pc-builds .build-container {
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-container h1 {
+                font-size: 1.2em;
+            }
+
+            .hero h2 {
+                font-size: 2.5em;
+            }
+
+            .pc-builds h2 {
+                font-size: 40px;
+            }
+
+            .pc-builds .build {
+                padding: 20px;
+            }
+
+            .pc-builds .build h3 {
+                font-size: 18px;
+            }
+
+            .pc-builds .build p {
+                font-size: 0.9em;
+            }
+        }
   </style>
 </head>
 
-<body>
+
   <header>
-    <div class="header-container">
-      <a href="index.html">TechShesh PC Build Ideas</a>
+    <div class="navbar-custom">
+      <a href="index.html" class="text-white"><strong>TechShesh PC Build Ideas</strong></a>
     </div>
-    <div class="navbar">
-      <div class="nav-item"><a href="index.html">Home</a></div>
+    <div class="nav-links">
+      <div class="nav-item"><a href="index.html#Home">Home</a></div>
       <div class="nav-item"><a href="index.html#about">About</a></div>
       <div class="nav-item dropdown">
         <button class="dropbtn">PC Build</button>
@@ -261,11 +329,9 @@
     </div>
   </header>
 
-     <section class="hero" id="Home" style="background-image: url('Image/backround.jpg');
+     <section class="hero" id="Home" style="background-image: url('image/backround.jpg');
     background-position: center; background-size: cover;">
         <div>
-
-            
             <h2>Low-End Gaming PC Build</h2>
         </div>
     </section>
@@ -302,7 +368,6 @@
     </div>
 </div>
 
-            
       <div class="build-container">      
     <div class="build">
         <h3>Low-End Gaming Build (Intel) - Latest</h3>
@@ -333,17 +398,9 @@
     </div>
 </div>
 </section>
-</section>
-
-
   <footer class="mt-5">
     <p>&copy; 2025 TechShesh PC Builds. All rights reserved.</p>
   </footer>
 
 </body>
-</section>  
-</body>
 </html>
-
-
-
