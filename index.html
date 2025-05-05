@@ -27,26 +27,57 @@
     }
 
     
-    @media (max-width: 768px) {
+  @media (max-width: 768px) {
   .navbar-custom {
-    font-size: 20px;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center; /* Center logo and links */
+    padding: 10px 20px;
+    font-size: 24px; /* Adjust font size for small screens */
   }
 
   .nav-links {
     flex-direction: column;
-    align-items: flex-start;
+    width: 100%; /* Full width */
+    align-items: center; /* Center the nav items */
+    padding: 10px 0;
     gap: 10px;
   }
 
   .nav-item a,
   .dropbtn {
-    font-size: 1em;
+    font-size: 1.2em; /* Make font slightly larger for easier clicking */
     padding: 8px 12px;
   }
-}
 
+  /* Hero section on smaller screens */
+  .hero {
+    height: auto;
+    padding: 20px;
+    background-size: cover;
+  }
+
+  .hero h2 {
+    font-size: 2rem; /* Adjust font size for mobile */
+  }
+
+  .hero p {
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+
+  /* About section */
+  .about {
+    padding: 40px 20px;
+  }
+
+  .about h2 {
+    font-size: 2.5rem; /* Adjust font size */
+  }
+
+  .about p {
+    font-size: 1rem; /* Adjust text size */
+  }
+}
     a {
       text-decoration: none;
       color: inherit;
