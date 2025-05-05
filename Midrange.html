@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best PC Builds - AMD or Intel</title>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <style>
+   
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+           
+        }
+
+
+        header {
+            background-color: #000;
+            color: white;
+            padding: 20px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+          .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            background-color: #000;
+            margin-top: -50px;
+            margin-left: 1100px;
+
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-item a,
+        .dropbtn {
+            color: white;
+            font-size: 1.1em;
+            padding: 10px 15px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        .nav-item a:hover,
+        .dropbtn:hover {
+            color: #2980b9;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #111;
+            min-width: 180px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            border-radius: 5px;
+        }
+
+        .dropdown-content a {
+            display: block;
+            color: white;
+            padding: 10px 15px;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #222;
+            color: #2980b9;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+
+        .header-container {
+              max-width: 1700px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            font-size: 30px;
+            font-family: sans-serif;
+            font-weight:    700;
+        }
+
+        .header-container h1 {
+            font-size: 2em;
+            font-weight: 700;
+        }
+
+        .hero {
+            height: 50vh;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+           
+        }
+
+        .hero h2 {
+            font-size: 6em;
+            font-weight: 700;
+        }
+
+        .about {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; 
+            padding: 60px 20px;
+            background-color: #fff;
+            color: #333;
+            text-align: center;
+
+          
+        }
+
+        .about h2 {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 30px;
+            font-size: 80px;
+        }
+
+        .about p {
+            font-size: 25px;
+            color: #666;
+            margin-bottom: 40px;
+            margin-left: 100px;
+        }
+
+        .pc-builds {
+            padding: 80px 20px;
+            background-color: #ffffff;
+            text-align: center;
+        }
+
+        .pc-builds h2 {
+            font-size: 100px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 40px;
+            margin-left: 25px;
+            text-align: center;
+            align-items: center;
+        }
+
+        .pc-builds .build-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 35px;
+            justify-items: center;
+            margin-bottom: 40px;
+            align-items: center;
+        }
+
+        .pc-builds .build {
+            background-color: #f9f9f9;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .pc-builds .build:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .pc-builds .build h3 {
+            font-size: 20px;
+            color: #2980b9;
+            margin-bottom: 50px;
+        }
+
+        .pc-builds .build p {
+            font-size: 1.1em;
+            color: #666;
+        }
+
+        .pc-builds .build ul {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+
+        .pc-builds .build ul li {
+            font-size: 1em;
+            color: #444;
+            margin: 7px 0;
+        }
+
+        .pc-builds .build .cta-button {
+            margin-top: 20px;
+        }
+
+        footer {
+            background-color: #000;
+            color: white;
+            text-align: center;
+            padding: 15px 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            font-size: 1em;
+            margin-top: 10px;
+        }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <a href="index.html">TechShesh PC Build Ideas</a>
+    </div>
+    <div class="navbar">
+      <div class="nav-item"><a href="index.html">Home</a></div>
+      <div class="nav-item"><a href="index.html#about">About</a></div>
+      <div class="nav-item dropdown">
+        <button class="dropbtn">PC Build</button>
+        <div class="dropdown-content">
+          <a href="HighEnd.html">High-End Build</a>
+          <a href="Midrange.html">Midrange Build</a>
+          <a href="Lowend.html">Low End</a>
+        </div>
+      </div>
+      <div class="nav-item"><a href="Home.html#contact">Contact</a></div>
+    </div>
+  </header>
+
+    <section class="hero" id="Home" style="background-image: url('image/backround.jpg'); background-position: center; background-size: cover;">
+    <div>
+      <h2>Mid-Range Gaming PC Build</h2>
+    </div>
+  </section>
+
+    <section class="pc-builds">
+         <div class="build-container">
+            <div class="build">
+            <h3>Mid-Range Gaming Build (AMD)</h3>
+            <ul>
+            <li>CPU: AMD Ryzen 5 7600X</li>
+            <li>GPU: NVIDIA RTX 3060</li>
+            <li>RAM: 16GB Corsair Vengeance DDR4</li>
+            <li>Storage: 1TB Samsung 970 EVO Plus NVMe SSD</li>
+            <li>Motherboard: MSI MAG B550 TOMAHAWK</li>
+            <li>Cooling: Cooler Master Hyper 212</li>
+            <li>PSU: 650W Corsair RM650</li>
+        </ul>
+        <p><strong>Games:</strong> Call of Duty: Warzone, Fortnite, Apex Legends (1080p Ultra)</p>
+
+            </div>
+            <div class="build">
+                <h3>Mid-Range Gaming Build (Intel)</h3>
+                <ul>
+                               <li>CPU: Intel Core i5-13600K</li>
+            <li>GPU: NVIDIA RTX 3060</li>
+            <li>RAM: 16GB Corsair Vengeance DDR4</li>
+            <li>Storage: 1TB Samsung 970 EVO Plus</li>
+            <li>Motherboard: ASUS TUF Gaming Z690-Plus WiFi</li>
+            <li>Cooling: Cooler Master Hyper 212</li>
+            <li>PSU: 650W Corsair RM650</li>
+        </ul>
+        <p><strong>Games:</strong> Call of Duty: Warzone, Cyberpunk 2077 (1080p Ultra)</p>
+
+            </div>
+        </div>
+        <div class="build-container">
+            <div class="build">
+                <h3>Mid-Range Gaming Build (AMD)</h3>
+                <ul>
+                             <li>CPU: AMD Ryzen 5 7600</li>
+            <li>GPU: NVIDIA RTX 4060</li>
+            <li>RAM: 16GB Corsair Vengeance DDR5-5600</li>
+            <li>Storage: 1TB Samsung 980 Pro NVMe SSD</li>
+            <li>Motherboard: ASUS TUF Gaming B550-PLUS</li>
+            <li>Cooling: Cooler Master Hyper 212</li>
+            <li>PSU: 650W Corsair CV650</li>
+        </ul>
+        <p><strong>Games:</strong> Forza Horizon 5, Red Dead Redemption 2, Valorant (1080p Ultra)</p>
+
+            </div>
+            <div class="build">
+                 <h3>Mid-Range Gaming Build (AMD)</h3>
+                 <ul>
+                          <li>CPU: Intel Core i5-12600K</li>
+            <li>GPU: NVIDIA RTX 4060</li>
+            <li>RAM: 16GB G.Skill Ripjaws V DDR4-3200</li>
+            <li>Storage: 1TB Crucial P5 NVMe SSD</li>
+            <li>Motherboard: MSI MAG B660M MORTAR WIFI</li>
+            <li>Cooling: Cooler Master Hyper 212</li>
+            <li>PSU: 650W Thermaltake Smart RGB 80+ Bronze</li>
+        </ul>
+        <p><strong>Games:</strong> Battlefield V, Shadow of the Tomb Raider, Fortnite (1080p Ultra)</p>
+
+            </div>
+        </div>
+
+        </section>
+
+  <footer class="mt-5">
+    <p>&copy; 2025 TechShesh PC Builds. All rights reserved.</p>
+  </footer>
+
+</body>
+</section>  
+</body>
+</html>
+
+
+
